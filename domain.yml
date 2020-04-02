@@ -1,0 +1,34 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- provide_all
+- provide_none
+- provide_topping
+- provide_size
+entities:
+- size
+- topping
+slots:
+  size:
+    type: text
+  topping:
+    type: text
+responses:
+  utter_greet:
+  - text: Hey there! :) What you want?
+  utter_size:
+  - text: What size pizza you want ?
+  utter_topping:
+  - text: What toppings you would like on your pizza ?
+  utter_pizza:
+  - text: You want {size} {topping} pizza.
+  utter_bye:
+  - text: Bye, thanks for chatting with pizza bot!
+actions:
+- utter_greet
+- utter_size
+- utter_topping
+- utter_pizza
+- utter_bye
